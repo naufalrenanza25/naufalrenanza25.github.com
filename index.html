@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ✏️ ISI 1: ganti NAMA LENGKAP -->
+<title>M. Naufal Renanza | Profil</title>
+<meta name="description" content="Website profil Nama Lengkap, mahasiswa Teknologi Rekayasa Elektro UGM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Palet: 2 warna + netral. Font: 1 jenis (IBM Plex Sans). */
+  :root {
+    --ink: #14202e;
+    --muted: #55606d;
+    --paper: #f7f8f6;
+    --line: #d5dad7;
+    --blue: #0b3a6b;
+    --amber: #e0a100;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    margin: 0;
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 1rem;
+  }
+  a { color: var(--blue); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--blue);
+    padding: 0.7rem 1.25rem;
+  }
+  nav ul {
+    list-style: none; margin: 0 auto; padding: 0; max-width: 760px;
+    display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem;
+  }
+  nav a { color: #fff; text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+  nav a:hover { color: var(--amber); }
+
+  main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+
+  /* Hero */
+  .hero { display: flex; gap: 1.75rem; align-items: center; flex-wrap: wrap; padding-bottom: 2.5rem; }
+  .foto {
+    width: 168px; height: 168px; flex: none;
+    border-radius: 50%; object-fit: cover;
+    border: 4px solid var(--amber);
+    background: var(--line);
+  }
+  .hero h1 { margin: 0; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.12; letter-spacing: -0.02em; color: var(--blue); }
+  .tagline { margin: 0.6rem 0 0; font-size: 1.1rem; color: var(--muted); max-width: 34ch; }
+
+  /* Jalur sirkuit: garis di kiri dengan titik di setiap bagian */
+  .jalur { border-left: 3px solid var(--blue); margin-left: 6px; padding-left: 1.6rem; }
+  section { position: relative; padding-bottom: 2.4rem; }
+  section::before {
+    content: ""; position: absolute; left: calc(-1.6rem - 9px); top: 0.55rem;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--paper); border: 3px solid var(--amber);
+  }
+  h2 { margin: 0 0 0.6rem; font-size: 1.45rem; letter-spacing: -0.01em; }
+  h3 { margin: 0; font-size: 1.05rem; }
+  p { margin: 0 0 0.8rem; max-width: 68ch; }
+  .meta { color: var(--muted); font-size: 0.93rem; margin: 0; }
+
+  .item { margin-bottom: 1.1rem; }
+  .item img { max-width: 100%; border-radius: 6px; border: 1px solid var(--line); margin: 0.5rem 0; display: block; }
+
+  .skill-grup { margin-bottom: 0.9rem; }
+  .skill-grup h3 { margin-bottom: 0.4rem; }
+  .chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .chips li {
+    padding: 0.25rem 0.8rem; border: 1.5px solid var(--blue); border-radius: 4px;
+    font-size: 0.92rem; font-weight: 500; color: var(--blue); background: #fff;
+  }
+
+  .kontak { list-style: none; padding: 0; margin: 0; }
+  .kontak li { margin-bottom: 0.35rem; }
+  .kontak strong { display: inline-block; min-width: 5.5rem; }
+
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 1.5rem 1rem 2rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 520px) {
+    .hero { flex-direction: column; align-items: flex-start; }
+    .foto { width: 140px; height: 140px; }
+    .jalur { padding-left: 1.3rem; }
+    section::before { left: calc(-1.3rem - 9px); }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigasi utama">
+  <ul>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#pendidikan">Pendidikan</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#proyek">Proyek</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ===== 1. NAMA DAN FOTO + 2. TAGLINE ===== -->
+  <header class="hero">
+    <!-- ✏️ ISI 2: simpan fotomu dengan nama foto.jpg di folder yang sama dengan index.html.
+         Pakai foto yang rapi (boleh sama dengan foto LinkedIn). Ubah teks alt. -->
+    <img class="foto" src="foto.jpg.jpeg" alt="Foto Nama Lengkap" width="168" height="168">
+    <div>
+      <!-- ✏️ ISI 3: nama lengkap -->
+      <h1>M. Naufal Renanza</h1>
+      <!-- ✏️ ISI 4: tagline satu baris (status + bidang yang diminati) -->
+      <p class="tagline"> Mahasiswa Teknologi Rekayasa Elektro UGM yang tertarik pada energi terbarukan, elektronika, dan pemrograman.</p>
+    </div>
+  </header>
+
+  <div class="jalur">
+
+    <!-- ===== 3. TENTANG SAYA ===== -->
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <!-- ✏️ ISI 5: 3–5 kalimat: prodi, bidang yang diminati, yang sedang dipelajari, yang ingin dicapai.
+           Bahasa wajar, tidak berlebihan. Hapus teks contoh ini. -->
+      <p>Saya mahasiswa tahun pertama program studi Teknologi Rekayasa Elektro di Universitas Gadjah Mada Angkatan 2026 yang memiliki minat kuat di bidang energi terbarukan, elektronika dan pemograman. Saat ini, saya tengah mengembangkan pengetahuan dan keterampilan teknis, sembari memperkuat kemampuan dalam pemecahan masalah, adaptabilitas dan kerja sama tim. Saya termotivasi untuk terus belajar, berkonstribusi dalam proyek-proyek yang bermakna, serta menerapkan ilmu yang dimiliki untuk mendukung terciptanya solusi yang inovatif dan berkelanjutan.
+    </section>
+
+    <!-- ===== 4. PENDIDIKAN ===== -->
+    <section id="pendidikan">
+      <h2>Pendidikan</h2>
+      <div class="item">
+        <h3>Sarjana Terapan Teknologi Rekayasa Elektro</h3>
+        <p class="meta">Departemen Teknik Elektro dan Informatika (DTEDI), Sekolah Vokasi, Universitas Gadjah Mada</p>
+        <p class="meta">2026–2030</p>
+      </div>
+      <!-- ✏️ ISI 6 (opsional tapi disarankan): SMA/SMK dan jurusan. Hapus blok ini kalau tidak mau dicantumkan. -->
+      <div class="item">
+        <h3>SMA Negeri 03 Palembang
+        <p class="meta">Kurikulum Merdeka</p>
+        <p class="meta">2023-2026</p>
+      </div>
+    </section>
+
+    <!-- ===== 5. SKILL ===== -->
+    <section id="skill">
+      <h2>Skill</h2>
+      <!-- ✏️ ISI 7: tulis apa adanya. Hapus yang belum kamu kuasai/pelajari. Tambah atau kurangi <li> sesuai kebutuhan. -->
+      <div class="skill-grup">
+        <h3>Teknis</h3>
+        <ul class="chips">
+          <li>Microsoft Word</li>
+          <li>Microsoft Excel</li>
+          <li>Canva</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div class="skill-grup">
+        <h3>Non-teknis</h3>
+        <ul class="chips">
+          <li>Kerja sama tim</li>
+          <li>Komunikasi</li>
+          <li>Manajemen waktu</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 6. PROYEK ATAU PENGALAMAN ===== -->
+    <section id="proyek">
+      <h2>Proyek dan Pengalaman</h2>
+      <!-- ✏️ ISI 8: tugas, proyek, kepanitiaan, organisasi, atau pelatihan. 1–2 kalimat per item.
+           Kalau belum ada, isi dengan rencana/hal yang sedang dipelajari. Salin blok .item untuk menambah. -->
+      <div class="item">
+        <h3>KMTEDI SV UGM</h3>
+        <p class="meta">Staf PSDM · 2026-2027</p>
+        <p>Sebagai staf Divisi Pengembangan Sumber Daya Manusia (PSDM) KMTEDI, saya memulai pengalaman berorganisasi pertama sejak memasuki dunia perkuliahan. Pengalaman ini menjadi kesempatan bagi saya untuk mengembangkan keterampilan komunikasi, kerja sama tim, kepemimpinan, dan pemecahan masalah, sekaligus berkontribusi dalam pengembangan mahasiswa.</p>
+        <!-- Foto opsional: simpan di folder yang sama, lalu hapus tanda komentar di baris bawah dan ubah nama filenya.
+        <img src="proyek1.jpg" alt="Deskripsi singkat foto proyek" loading="lazy">
+        -->
+      </div>
+      <div class="item">
+        <h3>INTO UGM 2027</h3>
+        <p class="meta">Staf Materi INTO UGM 2027 · 2027</p>
+        <p>Menjadi Staff Materi dari INTO UGM 2027 yang bertugas untuk merancang dan menyusun informasi yang diperlukan untuk kegiatan sosialisasi ke sekolah-sekolah, menjalin kerja sama untuk pelaksanaan Try-Out dan menyiapkan materi untuk kegiatan University Fair.</p>
+      </div>
+      <div class="item">
+        <h3>Forum Anak Kota Palembang</h3>
+        <p class="meta">Wakil Kluster 1 Hak Sipil dan Kebebasan · 2024-2026</p>
+        <p>Menjadi bagian dari kepengurusan Forum Anak Kota Palembang yang aktif di kluster Hak Sipil dan Kebebasan yang program kerjanya menampung aspirasi anak dan mensosialisasikan mengenai apa saja hak hak anak.
+      <div class = "item">
+        <h3>OSIS SMAN 3 Palembang</h3>
+        <p class="meta">Ketua Seksi Bidang 5  Demokrasi, Hak Asasi Manusia, Pendidikan Politik, Lingkungan Kepekaan Sosial dan Toleransi Sosial · 2024-2025</p>
+        <p>Menjabat sebagai Ketua Seksi Bidang 5 yang berfokus pada demokrasi, hak asasi manusia, pendidikan politik, lingkungan hidup, kepekaan sosial, dan toleransi di lingkungan sekolah. Memimpin pelaksanaan program kerja, termasuk peringatan hari nasional dan Hari Pahlawan melalui berbagai kegiatan dan perlombaan.</p>
+      </div>
+        </section>
+
+    <!-- ===== 7. KONTAK ===== -->
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <ul class="kontak">
+        <!-- ✏️ ISI 9: email aktif (ganti di dua tempat: href dan teks) -->
+        <li><strong>Email</strong> <a href="mailto:naufalrenanza@gmail.com">naufalrenanza@gmail.com</a></li>
+        <!-- ✏️ ISI 10: link profil LinkedIn dari penugasan sebelumnya -->
+        <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/m-naufal-renanza-40514a428" target="_blank" rel="noopener">https://www.linkedin.com/in/m-naufal-renanza-40514a428</a></li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <!-- ✏️ ISI 12: nama dan tahun -->
+  © 2026 M. Naufal Renanza
+</footer>
+
+</body>
+</html>
